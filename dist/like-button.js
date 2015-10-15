@@ -151,18 +151,11 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var _styles = this.styles();
-
-	      var container = _styles.container;
-	      var like = _styles.like;
-	      var likeHover = _styles.likeHover;
-	      var counterBefore = _styles.counterBefore;
-	      var counter = _styles.counter;
-
-	      var likeStyle = this.state.hovered ? _extends({}, like, likeHover) : like;
+	      var styles = this.styles();
+	      var likeStyle = this.state.hovered ? _extends({}, styles.like, styles.likeHover) : styles.like;
 	      return _react2["default"].createElement(
 	        "span",
-	        { style: container },
+	        { style: styles.container },
 	        _react2["default"].createElement(
 	          "span",
 	          {
@@ -175,10 +168,10 @@
 	        ),
 	        _react2["default"].createElement(
 	          "span",
-	          { style: counter },
+	          { style: styles.counter },
 	          _react2["default"].createElement(
 	            "span",
-	            { style: counterBefore },
+	            { style: styles.counterBefore },
 	            " "
 	          ),
 	          this.state.count
