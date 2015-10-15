@@ -75,7 +75,7 @@
 	    _get(Object.getPrototypeOf(LikeButton.prototype), "constructor", this).call(this, props);
 	    this.state = {
 	      hovered: false,
-	      count: 0,
+	      count: 999,
 	      liked: false
 	    };
 	  }
@@ -170,7 +170,7 @@
 	            onMouseEnter: this.onMouseEnter.bind(this),
 	            onMouseLeave: this.onMouseLeave.bind(this),
 	            onClick: this.onClick.bind(this) },
-	          this.state.liked ? "✔ " : "Ｆ",
+	          this.state.liked ? "✔ " : "",
 	          "いいね！"
 	        ),
 	        _react2["default"].createElement(

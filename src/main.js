@@ -6,7 +6,7 @@ class LikeButton extends React.Component {
     super(props);
     this.state = {
       hovered: false,
-      count: 0,
+      count: 999,
       liked: false
     }
   }
@@ -84,7 +84,7 @@ class LikeButton extends React.Component {
           style={likeStyle}
           onMouseEnter={::this.onMouseEnter}
           onMouseLeave={::this.onMouseLeave}
-          onClick={::this.onClick}>{this.state.liked ? "✔ " : "Ｆ"}いいね！</span>
+          onClick={::this.onClick}>{this.state.liked ? "✔ " : ""}いいね！</span>
         <span style={counter}>
           <span style={counterBefore}>{" "}</span>
           {this.state.count}
